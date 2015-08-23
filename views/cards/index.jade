@@ -2,5 +2,18 @@ extends ../layout
 
 block content
   h1 Cards
-  
+  table
+    thead
+      tr
+        th Course
+        th Hole 1 Score
+        th Hole 2 Score
+        th Total Score
+    tbody
+      for card in allCards
+        tr
+          td= card.course
+          td= card.hole1
+          td= card.hole2
+          td= card.hole1 + card.hole2
   a(href='/cards/new') New Scorecard

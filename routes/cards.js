@@ -5,7 +5,9 @@ var cardCollection = db.get('cards');
 
 /* GET home page. */
 router.get('/cards', function(req, res, next) {
-  res.render('cards/index', { title: 'Express' });
+  cardCollection.find({}, function(err, cards){
+    res.render('cards/index', {allCards: cards});
+  });
 });
 
 router.get('/cards/new', function(req, res, next) {
@@ -13,7 +15,7 @@ router.get('/cards/new', function(req, res, next) {
 });
 
 router.post('/cards', function(req, res, next) {
-  cardCollection.insert({ course: req.body.course_name, hole1: req.body.hole_one });
+  cardCollection.insert({ course: req.body.course_name, hole1: req.body.hole_one, hole2: req.body.hole_two });
   res.redirect('/cards');
 });
 
