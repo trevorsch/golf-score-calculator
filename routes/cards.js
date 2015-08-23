@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var db = require('monk')('localhost/cards-demo');
+var db = require('monk')('localhost/cards-store');
 var cardCollection = db.get('cards');
 
 /* GET home page. */
