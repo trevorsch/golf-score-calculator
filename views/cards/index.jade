@@ -8,6 +8,8 @@ block content
         th Course
         th Hole 1 Score
         th Hole 2 Score
+        th Hole 3 Score
+        th Hole 4 Score
         th Total Score
     tbody
       for card in allCards
@@ -15,6 +17,8 @@ block content
           td= card.course
           td= card.hole1
           td= card.hole2
-          td= card.hole1 + card.hole2
+          td= card.hole3
+          td= card.hole4
+          td= card.hole1 + card.hole2 + card.hole3 + card.hole4
   a(href='/cards/new') New Scorecard
   a(href='/') Back to Home
