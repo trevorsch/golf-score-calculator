@@ -4,18 +4,24 @@ block content
   h1 Add A New Round
   
   form(action="/cards", method="post")
-    div Course: 
-      input(type="text" name="course_name")
-    div Hole 1: 
-      input(type='number' name='hole_one')
-    div Hole 2:
-      input(type='number' name='hole_two')
-    div Hole 3:
-      input(type='number' name='hole_three')
-    div Hole 4:
-      input(type='number' name='hole_four')
     div
-      input(type="submit" value="Enter Round")
+      label(for="course") Course: 
+      input(type="text" name="course_name" id='course')
+    div
+      label(for="hole1") Hole 1:
+      input(type='number' name='hole_one' id='hole1')
+    div
+      label(for="hole1") Hole 2:
+      input(type='number' name='hole_two' id='hole2')
+    div
+      label(for="hole3") Hole 3:
+      input(type='number' name='hole_three' id='hole3')
+    div
+      label(for="hole4") Hole 4:
+      input(type='integer' name='hole_four' id='hole4')
+    div
+      label(for="hole")
+      input(type="submit" value="Enter Round" id='hole')
       a(href='/cards') See my rounds
     div
       a(href='/') Go Back Home
