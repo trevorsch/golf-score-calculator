@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+#new_card {
+  color: #02F3EE;
+  font-size: 30px;
+  font-family: Helvetica;
+}
